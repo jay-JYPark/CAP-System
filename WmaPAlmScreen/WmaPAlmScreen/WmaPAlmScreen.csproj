@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E4DAA2AE-40F8-4084-A4F9-7D6539C24A99}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WmaPAlmScreen</RootNamespace>
+    <AssemblyName>WmaPAlmScreen</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\다목적경보시스템_실행.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CAPLib">
+      <HintPath>..\..\..\..\..\Dropbox\공유폴더\서해안다목적시스템\200_DLLs\CAPLib.dll</HintPath>
+    </Reference>
+    <Reference Include="IEASProtocol">
+      <HintPath>..\..\..\..\..\Dropbox\공유폴더\서해안다목적시스템\200_DLLs\IEASProtocol.dll</HintPath>
+    </Reference>
+    <Reference Include="NCasAppCommon, Version=1.4.6134.29794, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Dropbox\공유폴더\NCAS\NCAS_200_NCAS_DLLs\NCasAppCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="NCASBIZ, Version=1.0.6131.37387, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Dropbox\공유폴더\NCAS\NCAS_200_NCAS_DLLs\NCASBIZ.dll</HintPath>
+    </Reference>
+    <Reference Include="NCasContentsModule, Version=1.0.5626.32130, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Dropbox\공유폴더\NCAS\NCAS_200_NCAS_DLLs\NCasContentsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="NCASFND, Version=1.0.6131.29254, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Dropbox\공유폴더\NCAS\NCAS_200_NCAS_DLLs\NCASFND.dll</HintPath>
+    </Reference>
+    <Reference Include="NCasMsgCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Dropbox\공유폴더\NCAS\NCAS_200_NCAS_DLLs\NCasMsgCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BizDataClass\AutoOrderBizData.cs" />
+    <Compile Include="BizDataClass\KeyBizData.cs" />
+    <Compile Include="BizDataClass\LedBizData.cs" />
+    <Compile Include="BizDataClass\OrderBizData.cs" />
+    <Compile Include="DeviceStatus\DeviceStatusData.cs" />
+    <Compile Include="DeviceStatus\DeviceStatusDataContainer.cs" />
+    <Compile Include="DeviceStatus\DeviceStatusMng.cs" />
+    <Compile Include="DisasterBroadFlag\DisasterBroadFlagMng.cs" />
+    <Compile Include="DistIconContent\DistIconData.cs" />
+    <Compile Include="DistIconContent\DistIconDataContainer.cs" />
+    <Compile Include="DistIconContent\DistIconMng.cs" />
+    <Compile Include="GroupContent\GroupContentContainer.cs" />
+    <Compile Include="GroupContent\GroupContentMng.cs" />
+    <Compile Include="GroupContent\GroupData.cs" />
+    <Compile Include="GroupContent\GroupContent.cs" />
+    <Compile Include="KeyData\KeyDataContainer.cs" />
+    <Compile Include="KeyData\KeyDataMng.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionContents\HeightPointContent.cs" />
+    <Compile Include="OptionContents\HeightPointContentContainer.cs" />
+    <Compile Include="OptionContents\HeightPointContentMng.cs" />
+    <Compile Include="OptionContents\HeightPointData.cs" />
+    <Compile Include="OptionContents\HeightOptionData.cs" />
+    <Compile Include="OptionContents\HeightOptionDataContainer.cs" />
+    <Compile Include="OptionContents\HeightOptionMng.cs" />
+    <Compile Include="OptionContents\WeatherKindData.cs" />
+    <Compile Include="OptionContents\WeatherOptionData.cs" />
+    <Compile Include="OptionContents\WeatherOptionDataContainer.cs" />
+    <Compile Include="OptionContents\WeatherOptionMng.cs" />
+    <Compile Include="ViewForms\AutoAlarmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForms\AutoAlarmForm.Designer.cs">
+      <DependentUpon>AutoAlarmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForms\OptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForms\OptionForm.Designer.cs">
+      <DependentUpon>OptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WmaPAlmScreenRsc.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WmaPAlmScreenRsc.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Password\PasswordMng.cs" />
+    <Compile Include="PAlmScreenBiz.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TTS\TtsControlDataMng.cs" />
+    <Compile Include="TTS\TtsDelayTimeMng.cs" />
+    <Compile Include="ViewForms\CoverView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewForms\CoverView.Designer.cs">
+      <DependentUpon>CoverView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForms\DeviceMonitorView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewForms\DeviceMonitorView.Designer.cs">
+      <DependentUpon>DeviceMonitorView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForms\DistIconUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewForms\DistIconUserControl.Designer.cs">
+      <DependentUpon>DistIconUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForms\OrderConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForms\OrderConfirmForm.Designer.cs">
+      <DependentUpon>OrderConfirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForms\OrderDistTermForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForms\OrderDistTermForm.Designer.cs">
+      <DependentUpon>OrderDistTermForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForms\OrderGroupEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForms\OrderGroupEditForm.Designer.cs">
+      <DependentUpon>OrderGroupEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForms\OrderResultView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewForms\OrderResultView.Designer.cs">
+      <DependentUpon>OrderResultView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForms\OrderStoredViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForms\OrderStoredViewForm.Designer.cs">
+      <DependentUpon>OrderStoredViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForms\OrderView19201080.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewForms\OrderView19201080.Designer.cs">
+      <DependentUpon>OrderView19201080.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForms\PDAlmScreenUIController.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewForms\PDAlmScreenUIController.Designer.cs">
+      <DependentUpon>PDAlmScreenUIController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForms\TermDestination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForms\TermDestination.Designer.cs">
+      <DependentUpon>TermDestination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForms\ViewBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ViewForms\ViewBase.Designer.cs">
+      <DependentUpon>ViewBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewForms\WrongOperationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewForms\WrongOperationForm.Designer.cs">
+      <DependentUpon>WrongOperationForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\AutoAlarmForm.resx">
+      <DependentUpon>AutoAlarmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\OptionForm.resx">
+      <DependentUpon>OptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WmaPAlmScreenRsc.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WmaPAlmScreenRsc.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ViewForms\CoverView.resx">
+      <DependentUpon>CoverView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\DeviceMonitorView.resx">
+      <DependentUpon>DeviceMonitorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\DistIconUserControl.resx">
+      <DependentUpon>DistIconUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\OrderConfirmForm.resx">
+      <DependentUpon>OrderConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\OrderDistTermForm.resx">
+      <DependentUpon>OrderDistTermForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\OrderGroupEditForm.resx">
+      <DependentUpon>OrderGroupEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\OrderResultView.resx">
+      <DependentUpon>OrderResultView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\OrderStoredViewForm.resx">
+      <DependentUpon>OrderStoredViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\OrderView19201080.resx">
+      <DependentUpon>OrderView19201080.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\TermDestination.resx">
+      <DependentUpon>TermDestination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\ViewBase.resx">
+      <DependentUpon>ViewBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewForms\WrongOperationForm.resx">
+      <DependentUpon>WrongOperationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barLoading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgHeader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgLoading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgMainDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgMenu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgMenu3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgTermSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box1Line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAlertGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAlertGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAlertNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAlertOrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAlertPink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAlertPupple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAlertRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAlertSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAlertWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAlertYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnArrLeftNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnArrLeftPress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnArrRightNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnArrRightPress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSaveNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSavePress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSmallNormal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnSmallPress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconStateGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconStateRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listIconError.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\listIconOk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popBgTop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popIconKey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popTermList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popTermSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1670.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1671.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1672.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1673.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1674.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1675.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1676.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1677.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1678.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1680.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1681.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1682.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1683.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1684.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1685.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1686.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alertIcon7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alertIcon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alertIcon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alertIcon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alertIcon4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alertIcon5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alertIcon6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1678map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1686map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1670map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1671map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1673map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1674map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1675map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1676map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1677map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1679map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1680map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1681map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1682map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1683map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1684map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1685map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_시도재난경보대.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgErrorPop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popGroupEditIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconMapYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconMap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconMapGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconMapOrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconMapPink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconMapPupple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconMapRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconMapSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconMapWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1679.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn003Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn001Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn001Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn002Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn002Up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn003Down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\다목적경보시스템_실행.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnTop.png" />
+    <None Include="Resources\mainBgBottom.png" />
+    <None Include="Resources\1672map.png" />
+    <None Include="Resources\bgPopBoxGroup.png" />
+    <None Include="Resources\bgPopLine1.png" />
+    <None Include="Resources\bgPopNum.png" />
+    <None Include="Resources\bgMainUp.png" />
+    <Content Include="다목적경보시스템_실행.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\WmaBoardTextManager\trunk\WmaBoardTextManager\WmaBoardTextManager\WmaBoardTextManager.csproj">
+      <Project>{8A95290B-EAF9-438D-8A41-D5889755A2B2}</Project>
+      <Name>WmaBoardTextManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
