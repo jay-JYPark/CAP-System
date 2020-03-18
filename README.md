@@ -1,4 +1,8 @@
 ## Common Alert Protocol System
+
+- 시스템 
+![cap_개념도](https://user-images.githubusercontent.com/62281279/76958774-acc8c280-695b-11ea-8c37-da3e44c1ec31.jpg)
+
 - TTA제정된 공통 프로토콜인 CAP을 이용한 재난 시스템
 - CAP을 사용한 모든 서버 및 장비는 연동 가능한 장점과 확장성
 - public 모드에서 모든 library와 source 오픈 불가능
