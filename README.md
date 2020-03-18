@@ -8,3 +8,5 @@
 - singleton pattern, oracle, TCP/UDP/SERIAL 등의 사용
 - protocol data encryption/decryption
 - private 모드를 위해 Contact 필요
+
+![IntegratedGateway_ClassDiagram](https://user-images.githubusercontent.com/62281279/76965934-86f5ea80-6968-11ea-9ab6-1310eda32765.jpg)
