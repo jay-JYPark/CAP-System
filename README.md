@@ -10,3 +10,5 @@
 - private 모드를 위해 Contact 필요
 
 ![IntegratedGateway_ClassDiagram](https://user-images.githubusercontent.com/62281279/76965934-86f5ea80-6968-11ea-9ab6-1310eda32765.jpg)
+
+![SequenceDiagram_IntergratedGateway_클라이언트 접속](https://user-images.githubusercontent.com/62281279/76965940-8b220800-6968-11ea-87a2-621d29f96dd9.jpg)
